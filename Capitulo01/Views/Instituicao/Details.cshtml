@@ -1,0 +1,47 @@
+﻿@model Capitulo01.Models.Instituicao
+
+@*@{
+    Layout = null;
+}*@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+    <div>
+        <h4>Detalhes de @Html.DisplayFor(model => model.Nome)</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                <label>Nº da Instituição</label>
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.InstituicaoID)
+            </dd>
+            <dt>
+                <label>Nome da Insituição</label>
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Nome)
+            </dd>
+            <dt>
+                <label>Endereço</label>
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Endereco)
+            </dd>
+        </dl>
+    </div>
+    <a asp-action="Edit" asp-route-id="@Model.InstituicaoID">Alterar</a>
+    <div>
+
+        @*@Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |*@
+        <a asp-action="Index">Back to List</a>
+    </div>
+</body>
+</html>
